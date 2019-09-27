@@ -1,0 +1,9 @@
+
+<ul>
+  <li *ngFor= "let hero of heroes" (click)="onSelect(hero)" > {{hero.id}} {{hero.name | lowercase}}</li>
+</ul>
+
+<div *ngIf = "sellectedHero">
+<h2>sellected Hero</h2>
+{{sellectedHero.id}} {{sellectedHero.name}}
+</div>
