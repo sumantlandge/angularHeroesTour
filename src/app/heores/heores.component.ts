@@ -20,7 +20,8 @@ export class HeoresComponent implements OnInit {
     console.log(this.sellectedHero)
   }
   ngOnInit() {
-    this.heroes = this.myService.getHeroes();
+    this.myService.getHeroes()
+    .subscribe(heroes => this.heroes=heroes);
 
   }
 
